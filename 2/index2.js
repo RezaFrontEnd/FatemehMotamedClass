@@ -29,4 +29,5 @@ const discount =()=>
                 }
             }
         }
+        alert("time over")
     }
