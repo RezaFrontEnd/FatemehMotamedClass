@@ -1,63 +1,75 @@
-let myBudget = 10000000
-const ghame = 120000
-const ghorme = 150000
-const kabab = 500000 
-const HazineBiron = 1000000 
-const hazineBashgah = 1000000 
-const hazinehCafe = 500000 
-const hafteAval = "hafte1"
-const hafteDovom = "hafte2"
-const hafteSevom = "hafte3"
-const hafteCharom = "hafte 4"
-const haftevaredShodeAval = "hafte1"
-const haftevaredShodeDovom = "hafte2"
-const haftevaredShodesevom = "hafte3"
-console.log(`budget kole shoma ${myBudget} ast`)
-if(haftevaredShodeAval=="hafte1")
+
+function ghaza()
+{
+    let myBudgetInput = document.getElementById("id_myBudget")
+    let myBudget = Number(myBudgetInput.value)
+    let ghameّInput = document.getElementById("id_ghame")
+    let ghame = Number(ghameّInput.value)
+    let ghormeInput = document.getElementById("id_ghorme")
+    let ghorme = Number(ghormeInput.value)
+    let kababInput = document.getElementById("id_ghorme")
+    let kabab = Number(kababInput.value)
+    let HazineBironInput = document.getElementById("id_biron")
+    let HazineBiron = Number(HazineBironInput.value)
+    let hazineBashgahInput = document.getElementById("id_bashgah")
+    let hazineBashgah = Number(hazineBashgahInput.value)
+    let hazinehCafeInput = document.getElementById("id_cafe")
+    let hazinehCafe = Number(hazinehCafeInput.value)
+    let hafteAval = "hafte1"
+    let hafteDovom = "hafte2"
+    let hafteSevom = "hafte3"
+    if(hafteAval=="hafte1")
     {
-        const kharj1 = (ghame*2)+ kabab + (ghorme*4);
+        let kharj1 = (ghame*2)+ kabab + (ghorme*4)
         if(kharj1<=myBudget)
         {
-            console.log(`kharj hafte aval ${kharj1} ast`)
+            let kharj1Result = document.getElementById("kharj1")
+            kharj1Result.innerText = `kharj hafte aval ${kharj1} ast`
             myBudget -= kharj1;
-            console.log(`budge hafte aval shoma ${myBudget} ast`)
+            let myBudgetResult = document.getElementById("myBoudgetResult")
+            myBudgetResult.innerText = `budget hafe aval shoma ${myBudget} ast`
         }
         else
             {
-                console.log("shoma enghar budge nadarid")
+                  myBudgetResult = document.getElementById("myBoudgetResult")
+                  myBudgetResult.innerText = `shoma boudget nadarid`
             }   
-        if(haftevaredShodeDovom == hafteDovom)
+        if(hafteDovom == "hafte2")
         {
-            const kharj2 = HazineBiron + hazineBashgah
+            let kharj2 = HazineBiron + hazineBashgah
             if(kharj2<=myBudget)
                 {
-                    console.log(`kharj hafte dovom ${kharj2} ast`)
+                    kharj2Result = document.getElementById("kharj2")
+                    kharj2Result.innerText = `kharj hafte dovom ${kharj2} ast`
                     myBudget -= kharj2;
-                    let result = kharj1 + kharj2
-                    console.log(`kharje hafte aval va dovom shoma ${result} ast`) 
-                    console.log(`budge hafte dovom shoma ${myBudget} ast`)  
+                    let resultKharj2 = kharj1 + kharj2
+                    resultKharj2 .innerText = `kharj hafte aval va dovom shoma ${kharj2}`
+                    myBudgetResult = document.getElementById("myBoudgetResult")
+                    myBudgetResult.innerText = `budget hafe aval va dovom shoma ${myBudget} ast`
                 }
             else
                 {
-                    console.log("shoma enghar budge nadarid")
+                    myBudget.innerText = `shoma ${myBudget} nadarid`
                 } 
-             if(haftevaredShodesevom == "hafte3")
+             if(hafteSevom == "hafte3")
                 {
-                    const kharj3 = hazinehCafe + HazineBiron + (kabab*3) + (ghame*4)
+                    let kharj3 = hazinehCafe + HazineBiron + (kabab*3) + (ghame*4)
                     if(kharj3<=myBudget)
                         {
-                            console.log(`kharj hafte dovom ${kharj3} ast`)
+                            kharj3Result = document.getElementById("kharj3")
+                            kharj3Result.innerText = `kharj hafte sevom shoma ${kharj3} ast`
                             myBudget -= kharj3;
-                            result = kharj1 + kharj2 + kharj3
-                            console.log(`kharje hafte aval va dovom va sevom shoma ${result} ast`)   
-                            console.log(`budge hafte sevom shoma ${myBudget} ast`)
+                            let resultKharj3 = kharj1 + kharj2 + kharj3
+                            resultKharj3 .innerText = `kharj hafte aval va dovom va sevom shoma ${kharj3}`
+                            myBudgetResult = document.getElementById("myBoudgetResult")
+                            myBudgetResult.innerText = `budget hafe aval va dovom va sevom shoma ${myBudget} ast`
+                            
                         }
                     else
                         {
-                            console.log("shoma enghar budge nadarid")
+                            myBudget.innerText = `shoma boudget nadarid`
                         }            
                 }               
         }  
-    }
-
-
+    }       
+}
