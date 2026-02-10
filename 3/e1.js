@@ -18,10 +18,8 @@
 //             }     
 //     }
 // alert("ok")
-let x = 0 
-while(x<=100)
+for(let x=0;x<=100;x++)
     {
-        x++
         if(x%2 == 1)
             {
                 continue
