@@ -53,7 +53,6 @@ if(player1[0] == "sang" && player2[0]=="sang")
                 }
         
     } 
-// hello change
 
 
 
