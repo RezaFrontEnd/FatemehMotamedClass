@@ -1,4 +1,4 @@
-//
+//تمرین بررسی طول کامنت
 let comment = "he llo123 this is my comment hello this is my comment hello this is my comment hello this is my comment hello this is my comment"
 if(comment.length<5)
     {
