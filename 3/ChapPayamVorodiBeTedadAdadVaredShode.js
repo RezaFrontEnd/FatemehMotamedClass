@@ -1,3 +1,4 @@
+//به تعداد ورودی پیام  ورودی چاپ بکند
 function NameChapTedad(message,count)
 {
    let result = message.repeat(count)
