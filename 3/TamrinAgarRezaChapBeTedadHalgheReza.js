@@ -1,3 +1,4 @@
+ //اگر اسم رضا بود به تعداد حلقه اسم رضا چاپ بکن
 let name = "reza"
 let result = []
 if(name == "reza")
