@@ -1,3 +1,4 @@
+‌//STRINGتمرین شمردن کاراکترهای 
 let text = "abbccc";
 let sum = 0
 let sum2 =0
