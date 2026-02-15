@@ -1,3 +1,4 @@
+//تمرین اگر اکتیو بود اسم یوزر چاپ کن
 let users = [
     { name: "Ali", isActive: true },
     { name: "Sara", isActive: false },
