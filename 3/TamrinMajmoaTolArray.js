@@ -1,3 +1,4 @@
+//تمرین بررسی طول آرایه
 function totalLength(arr)
 {
     let total = 0
