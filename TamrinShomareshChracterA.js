@@ -1,3 +1,4 @@
+// aتمرین شمارش تعداد کاراکتر شامل 
 let text = "banana apple";
 let sum = 0
 for(let x=0;x<text.length;x++)
