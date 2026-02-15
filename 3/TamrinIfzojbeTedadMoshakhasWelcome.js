@@ -1,3 +1,4 @@
+//اگر زوج بود به تعداد حلقه خوش آمد بگو
 function userGreetigs(count)
 {
     for(let x=1;x<=count;x++)
