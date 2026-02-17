@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .text
+        {
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">hello</p>
+    <p class="text">welcome to my site</p>
+    <script>
+        const data = document.querySelectorAll("p")
+        console.log(data)
+        for(let i=0;i<data.length;i++)
+        {
+            data[i].style.backgroundColor = "red"
+            data[i].style.color = "blue"
+        }
+    </script>
+</body>
+</html>

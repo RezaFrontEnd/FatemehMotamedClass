@@ -1,0 +1,50 @@
+  body {
+    font-family: Arial, sans-serif;
+    background: #eee;
+    padding: 20px;
+    direction: rtl;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li.done { text-decoration: line-through; color: gray; }
+
+  button.delete-btn { background: red; color: white; border: none; cursor: pointer; }
+
+  .result-card {
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .result-card h3 { margin-top: 0; margin-bottom: 10px; }
+  #todo-result { font-family: monospace; white-space: pre-line; }
