@@ -1,0 +1,226 @@
+body{
+    margin:0;
+    font-family:tahoma;
+    background:linear-gradient(135deg,#eef2f3,#dfe9f3);
+}
+
+/* ===== سبد خرید ===== */
+.cart{
+    position:fixed;
+    top:20px;
+    left:20px;
+    
+}
+
+.cart-icon{
+    background:white;
+    padding:12px 20px;
+    border-radius:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    cursor:pointer;
+    position:relative;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.cart-icon:hover{
+    transform:scale(1.05);
+}
+
+.cart-count{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    background:#ff4757;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+}
+
+/* dropdown */
+.cart-dropdown{
+    position:absolute;
+    top:65px;
+    left:0;
+    width:300px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.2);
+    padding:18px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:0.3s ease;
+}
+
+.cart:hover .cart-dropdown{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.cart-item{
+    display:flex;
+    gap:12px;
+    margin-bottom:15px;
+    align-items:center;
+    
+}
+.cart-item img
+{
+    order:-1
+}
+
+
+.cart-item img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.cart-item p{
+    margin:0;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.cart-item span{
+    font-size:13px;
+    color:#2ecc71;
+}
+
+.total{
+    border-top:1px solid #eee;
+    padding-top:12px;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* ===== کارت محصول ===== */
+.container{
+    display:flex;
+    justify-content:flex-end;
+    padding:120px 60px;
+}
+
+.product-card{
+    width:340px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+    padding:25px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-12px);
+}
+
+.product-card img{
+     width:100%;
+    aspect-ratio: 1 / 1;   /* مربع حرفه‌ای */
+    object-fit: cover;     /* کراپ تمیز */
+    border-radius:20px;
+    display:block;
+}
+
+.product-card h3{
+    margin:18px 0 10px;
+}
+
+.price{
+    color:#27ae60;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+/* تعداد */
+.quantity{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.quantity button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:#3498db;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.quantity button:hover{
+    background:#1f6ed4;
+}
+
+.quantity span{
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* دکمه افزودن */
+.add-btn{
+    background:linear-gradient(45deg,#6a11cb,#2575fc);
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    width:100%;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.add-btn:hover{
+    opacity:0.85;
+}
+.headphone-info
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* فاصله بین نام و جزئیات */
+}
+.headphone-details
+{
+    display: flex;
+    align-items: center;
+    gap: 12px; /* فاصله بین قیمت و تعداد */
+}
+.headphone-details .headphone-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+}
+.headphone-details .headphone-tedad {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* عدد به راست بچسبد */
+    min-width: 40px;
+    height: 28px;
+    padding: 0 8px 0 5px; /* padding راست بیشتر برای عدد */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.headphone-details .headphone-tedad:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+  
