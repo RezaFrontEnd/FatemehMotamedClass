@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- سبد خرید -->
+<div class="cart">
+    <div class="cart-icon">
+        🛒
+        <span class="cart-count"></span>
+    </div>
+
+    <div class="cart-dropdown">
+        <h4>سبد خرید شما</h4>
+
+        <div class="cart-item">
+            <div class="headphone-info">
+                <p class="headphone-name"></p>
+                <div class="headphone-details">
+                    <span class="headphone-price"></span>
+                    <span class="headphone-tedad">
+                        <span class="number"></span>
+                        عدد
+                    </span>
+                </div>  
+            </div>
+        </div>
+
+        <div class="cart-item">
+           
+            <div>
+                <p></p>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="total">
+        </div>
+    </div>
+</div>
+
+
+<!-- کارت محصول سمت راست -->
+<div class="container">
+    <div class="product-card">
+        <img src="images/product.jpg" alt="">
+        <h3></h3>
+        <p class="price"></p>
+        <div class="quantity">
+          <form>
+              <button class="minus">-</button>
+               <span></span>
+               <button class="plus">+</button>
+          </form>
+        </div>
+
+        <button class="add-btn">افزودن به سبد خرید</button>
+    </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
