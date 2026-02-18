@@ -42,7 +42,7 @@ if(savedName && savedPrice && savedQuantity)
         existImage.remove()
     }
     //مجموع هزینه ها
-    const total = Number(savedPrice) * Number(savedQuantity);
+   let total = Number(savedPrice) * Number(savedQuantity);
     headphone_total_price.innerHTML = "مجموع مبلغ " + total + " تومان";
     //ایجاد تگ تصویر
     const imgCreate = document.createElement("img");
@@ -83,6 +83,19 @@ add_button_query.onclick = function(event)
     price_query.innerHTML = headphone_price
     headphone_tedad_query.innerHTML = shomarande + "عدد"
     cart_count_query.innerHTML = shomarande
+    const existImage = cart_item_query.querySelector("img");
+    //حذف عکس تکراری
+    if(existImage) 
+    {
+        existImage.remove()
+    }
+    //ایجاد تگ تصویر
+    const imgCreate = document.createElement("img");
+    imgCreate.src = "images/product.jpg";
+    imgCreate.width = 200;
+    cart_item_query.appendChild(imgCreate);
+    total = Number(headphone_price) * Number(shomarande);
+    headphone_total_price.innerHTML = "مجموع مبلغ " + total + " تومان";
    
     
 }
