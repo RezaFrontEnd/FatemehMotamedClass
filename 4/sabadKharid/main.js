@@ -35,21 +35,10 @@ if(savedName && savedPrice && savedQuantity)
     price_query.innerHTML = savedPrice;
     headphone_tedad_query.innerHTML = savedQuantity + " عدد";
     cart_count_query.innerHTML = savedQuantity;
-    const existImage = cart_item_query.querySelector("img");
     //حذف عکس تکراری
-    if(existImage) 
-    {
-        existImage.remove()
-    }
+    existImages()
     //مجموع هزینه ها
-   let total = Number(savedPrice) * Number(savedQuantity);
-    headphone_total_price.innerHTML = "مجموع مبلغ " + total + " تومان";
-    //ایجاد تگ تصویر
-    const imgCreate = document.createElement("img");
-    imgCreate.src = "images/product.jpg";
-    imgCreate.width = 200;
-    cart_item_query.appendChild(imgCreate);
-
+    majmoaHazinehLocal()
 }
 
 
@@ -83,8 +72,16 @@ add_button_query.onclick = function(event)
     price_query.innerHTML = headphone_price
     headphone_tedad_query.innerHTML = shomarande + "عدد"
     cart_count_query.innerHTML = shomarande
+    existImages()
+    majmoaHazineh()
+ 
+}
+
+
+function existImages()
+{
     const existImage = cart_item_query.querySelector("img");
-    //حذف عکس تکراری
+        //حذف عکس تکراری
     if(existImage) 
     {
         existImage.remove()
@@ -94,12 +91,14 @@ add_button_query.onclick = function(event)
     imgCreate.src = "images/product.jpg";
     imgCreate.width = 200;
     cart_item_query.appendChild(imgCreate);
-    total = Number(headphone_price) * Number(shomarande);
-    headphone_total_price.innerHTML = "مجموع مبلغ " + total + " تومان";
-   
-    
 }
-
-
-
-  
+function majmoaHazineh()
+{
+    let total = Number(headphone_price) * Number(shomarande);
+    headphone_total_price.innerHTML = "مجموع مبلغ " + total + " تومان";
+}
+function majmoaHazinehLocal()
+{
+    let total = Number(headphone_price_tabdil) * Number(savedQuantity);
+    headphone_total_price.innerHTML = "مجموع مبلغ " + total + " تومان";
+}
