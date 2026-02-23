@@ -1,16 +1,16 @@
 function zarfiat()
 {
 let zarfiat_parking = [
-    {tabaghe1:1,zarfiat:49},
-    {tabaghe2:2,zarfiat:50},
-    {tabaghe3:3,zarfiat:20}
+    {tabaghe:1,zarfiat:49},
+    {tabaghe:2,zarfiat:50},
+    {tabaghe:3,zarfiat:20}
 ]
 let tabaghe = prompt("tabaghe chandom park mikonid?")
 tabaghe = Number(tabaghe)
 for(i of zarfiat_parking)
     {
         
-        if(tabaghe == i.tabaghe1 || tabaghe == i.tabaghe2 ||tabaghe == i.tabaghe3)
+        if(tabaghe == i.tabaghe)
             {
                 let tabagheInput= document.getElementById("result")
                 tabagheInput.innerText = `shoma tabaghe ${tabaghe} entekhab kardid`
