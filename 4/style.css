@@ -48,3 +48,17 @@
 
   .result-card h3 { margin-top: 0; margin-bottom: 10px; }
   #todo-result { font-family: monospace; white-space: pre-line; }
+
+.items button.delete
+  {
+    background-color: rgb(150,53,53);
+    padding:13px 15px;
+    margin-bottom:5px;
+    margin-top:-3px;
+  }
+.items button.delete.after
+{
+  content:"x";
+  line-height:28px;
+  background-color:rgb(197,57,57);
+}  

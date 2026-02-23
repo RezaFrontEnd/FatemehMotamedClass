@@ -25,10 +25,31 @@ function createRow(data)
 {
     const row = document.createElement("li")
     const title = document.createElement("h3")
+    const dtbn = document.createElement("button")
+    dtbn.innerHTML = "delete"
+    dtbn.onclick= () =>
+            {
+                if(confirm("Delete this row?"))
+                    {
+                    row.remove();
+                    todo_list = todo_list.filter(item => item.id !== data.id)
+                    addStorage() 
+                    }
+            }
+    title.onclick = () =>
+        {
+            const Newvalue = prompt("enter new value")
+            title.innerHTML = Newvalue
+            data.value = Newvalue
+            addStorage()
+        }        
     row.appendChild(title)
     container.appendChild(row)
-    title.innerHTML = data.value
+    row.appendChild(dtbn)
+    title.innerHTML = data.value        
 }
+
+
 function addStorage()
 {
     localStorage.setItem("todo-items",JSON.stringify(todo_list))

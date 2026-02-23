@@ -1,68 +1,116 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.slider{
-  width:90%;
-  max-width:900px;
-  height:500px;              /* ارتفاع ثابت بده */
-  margin:40px auto;
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
+body {
+  font-family: Verdana, sans-serif;
+  background: #111;
+  color: #fff;
 }
 
-.slider input{
-  display:none;
+/* کانتینر اسلایدر */
+.slider-container {
+  max-width: 1000px;
+  position: relative;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.slides{
-  display:flex;
-  height:100%;
-  transition:0.6s ease;
+/* هر اسلاید */
+.slide {
+  display: none; /* همه اسلایدها مخفی پیشفرض */
+  position: relative;
 }
 
-.slide{
-  min-width:100%;            /* مهم 🔥 */
-  height:100%;
+/* تصویر */
+.slide img {
+  width: 100%;
+  vertical-align: middle;
+  display: block;
 }
 
-.slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;          /* مهم 🔥 */
-  display:block;
+/* شماره اسلاید */
+.numbertext {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 12px;
+  color: #f2f2f2;
 }
 
-/* حرکت */
-#s1:checked ~ .slides{ transform:translateX(0%); }
-#s2:checked ~ .slides{ transform:translateX(-100%); }
-#s3:checked ~ .slides{ transform:translateX(-200%); }
-
-/* دات */
-.dots{
-  position:absolute;
-  bottom:15px;
-  width:100%;
-  text-align:center;
+/* متن کپشن */
+.caption {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #f2f2f2;
+  padding: 8px 12px;
 }
 
-.dots label{
-  width:12px;
-  height:12px;
-  background:#fff;
-  display:inline-block;
-  border-radius:50%;
-  margin:0 6px;
-  cursor:pointer;
-  opacity:0.5;
+/* فلش ها */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 3px;
+  user-select: none;
+  transition: 0.3s;
 }
 
-#s1:checked ~ .dots label[for="s1"],
-#s2:checked ~ .dots label[for="s2"],
-#s3:checked ~ .dots label[for="s3"]{
-  opacity:1;
-  transform:scale(1.2);
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* دات ها */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ffffff;
+}
+
+/* افکت fade */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4;}
+  to {opacity: 1;}
+}
+
+/* ریسپانسیو */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .caption {
+    font-size: 11px;
+    padding: 10px;
+  }
 }
