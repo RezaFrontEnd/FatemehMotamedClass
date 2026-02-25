@@ -4,7 +4,7 @@ const scriptsToLoad = [
   "/6/tarkibeArray/tarkibArray.js",
   "/6/slideShow/slide.js",
   "/6/ZarfiatParking/ZarfiatParking.js",
-  "/6/bmi/bmi.js"
+  "/6/bmi/bmi.js",
 ];
 
 // تابع برای اضافه کردن خودکار <script src="..."> به صفحه

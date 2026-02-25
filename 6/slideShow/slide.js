@@ -1,5 +1,19 @@
 let index = 1
 show(index)
+let timer
+startAuto()
+function autoSlide()
+{
+    change(1)
+}
+function startAuto()
+{
+    if(timer)
+        {
+            clearTimeout(timer)
+        }
+    timer = setTimeout(autoSlide,2000);
+}
 function show(n)
 {
     slides = document.getElementsByClassName("slide")
@@ -28,4 +42,5 @@ function show(n)
 function change(n)
 {
     show(index += n)
+    startAuto()
 }
